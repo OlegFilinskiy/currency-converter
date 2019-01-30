@@ -1,0 +1,65 @@
+{
+  "name": "currency-converter",
+  "version": "1.0.0",
+  "description": "Async/Await Currency Converter",
+  "main": "index.js",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "jasmine": true,
+      "jquery": true
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "ie >= 10",
+    "Firefox ESR",
+    "Safari >= 10"
+  ],
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build-only": "webpack --mode production",
+    "prod": "del-cli public && webpack --mode production && html public/*.html --indent-size 2",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open",
+    "beautify": "html public/*.html --indent-size 2",
+    "clear": "del-cli public"
+  },
+  "author": "Oleg Filinskiy",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "autoprefixer": "^9.4.2",
+    "bootstrap": "^4.2.1",
+    "popper.js": "^1.14.6",
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-env": "^7.2.0",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "copy-webpack-plugin": "^4.6.0",
+    "css-loader": "^2.0.0",
+    "cssnano": "^4.1.7",
+    "del-cli": "^1.1.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "html-cli": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^1.0.0",
+    "sass-loader": "^7.1.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

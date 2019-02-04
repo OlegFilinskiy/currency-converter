@@ -11,11 +11,11 @@
 </head>
 <body>
 <main>
-    <div class="container py-5">
+    <div class="container p-3 py-md-5 px-md-4">
         <div class="row">
             <div class="col-12 mb-3">
-                <h1 class="text-center mb-3 mx-auto">Online currency converter</h1>
-                <p>Select the currency you are interested and the amount:</p>
+                <h1 class="text-center mb-5 d-block mx-auto">Online currency converter</h1>
+                <p>Select the currency you are interested and the amount: *</p>
             </div>
         </div>
         <div class="row">
@@ -24,31 +24,25 @@
                     <div class="form-row mb-3">
                         <div class="form-group col-md-4 ">
                             <label class="mb-2" for="currencyFrom">Currency from</label>
-                            <select class="form-control input" name="currencyFrom" id="currencyFrom">
+                            <select class="form-control input" name="currencyFrom" id="currencyFrom" required>
                                 <option value="">Select</option>
                                 <option value="USD">USD</option>
                             </select>
-                            <!--<div class="valid-feedback"></div>-->
-                            <!--<div class="invalid-feedback"></div>-->
                         </div>
                         <div class="form-group col-md-4 ">
                             <label class="mb-2" for="currencyTo">Currency to</label>
-                            <select class="form-control input" name="currencyTo" id="currencyTo">
+                            <select class="form-control input" name="currencyTo" id="currencyTo" required>
                                 <option value="">Select</option>
                             </select>
-                            <!--<div class="valid-feedback"></div>-->
-                            <!--<div class="invalid-feedback"></div>-->
                         </div>
                         <div class="form-group col-md-4">
                             <label class="mb-2" for="amount">Amount</label>
                             <input type="number" class="form-control input" name="amount" id="amount" required>
-                            <!--<div class="valid-feedback"></div>-->
-                            <!--<div class="invalid-feedback"></div>-->
                         </div>
                     </div>
                     <p class="error"></p>
-                    <div class="form-row pl-1">
-                        <button type="submit" class="btn btn-primary px-4">Calculate</button>
+                    <div class="form-row pl-1 mt-4">
+                        <button type="submit" class="btn btn-primary px-5 mx-auto">Calculate</button>
                     </div>
                 </form>
             </div>
@@ -56,6 +50,13 @@
         <div class="row">
             <div class="col-12">
                 <div class="alert alert-success" role="alert"></div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="alert alert-warning" role="alert">
+                    <strong>*</strong> In the free version of currencylayer service you can choose only one currency. Therefore, for the example, the base currency was selected USD.
+                </div>
             </div>
         </div>
     </div>
